@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="EatSysJPAPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.Aluno</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.AreaConhecimento_Cnpq</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.AreaConhecimento_CnpqSubAreas</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.Campus</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.Cidade</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.CronogramaDeAtividade</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.CursoArea</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.Estado</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.Nacionalidade</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.Orientador</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.ParticipanteProjeto</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.Pessoa</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.PlanoDeTrabalho</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.ProjetoPesquisa</class>
+    <class>br.edu.ifnmg.eatsysJPA.domainModel.Usuario</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/a"/>
+      <property name="javax.persistence.jdbc.password" value="a"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+      <property name="javax.persistence.jdbc.user" value="a"/>
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+    </properties>
+  </persistence-unit>
+</persistence>
