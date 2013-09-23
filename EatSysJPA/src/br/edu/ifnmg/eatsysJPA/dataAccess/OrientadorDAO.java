@@ -17,7 +17,8 @@ import javax.persistence.Query;
   
 
 public class OrientadorDAO extends DAOGenerico<Orientador> {
-     public OrientadorDAO(Class t){
+    
+     public OrientadorDAO(){
         super(Orientador.class);
     }
     
@@ -65,14 +66,15 @@ public class OrientadorDAO extends DAOGenerico<Orientador> {
         }
         
         
-       if (filtro.length() > 0) {
+       
+        // Se houver filtros, coloca o "where" na consulta
+        if (filtro.length() > 0) {
             consulta = consulta + " where " + filtro;
         }
                 
 
         // Cria a consulta no JPA
         Query query = manager.createQuery(consulta);
-        
 
         // Aplica os parâmetros da consulta
         for (String par : parametros.keySet()) {
